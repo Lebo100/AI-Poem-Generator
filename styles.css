@@ -1,11 +1,14 @@
+/* Import beautiful serif and sans-serif fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Raleway:wght@300;400&display=swap');
 
+/* Reset some default styles for a cleaner look */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Set a default font and background color for the body */
 body {
     font-family: 'Raleway', sans-serif;
     background: #fdfaf6;
@@ -14,11 +17,13 @@ body {
     padding: 32px;
 }
 
+/* Style the header with a centered title and a decorative line below it */
 header {
     text-align: center;
     margin-bottom: 32px;
 }
 
+/* Style the header title with a serif font and a decorative line below it. Use a serif font for the header title to give it a classic look */
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 45px;
@@ -27,6 +32,7 @@ header h1 {
     position: relative;
 }
 
+/* Add a decorative line below the header title. The line is centered and has a specific width and height. */
 header h1::after {
     content: '';
     display: block;
@@ -37,11 +43,13 @@ header h1::after {
     border-radius: 2px;
 }
 
+/* Style the main content area with a maximum width and centered alignment */
 main {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Style the input section with a white background, padding, and rounded corners. The input section is centered and has a shadow effect for depth */
 #input-section {
     background: #fff;
     padding: 32px;
@@ -51,6 +59,7 @@ main {
     text-align: center;
 }
 
+/* Style the input section title with a serif font and a specific color. The title is centered and has a margin below it */
 label,
 select,
 button {
@@ -58,12 +67,14 @@ button {
     margin: 8px;
 }
 
+/* Style the select dropdown with padding, border, and rounded corners. The select dropdown has a specific font size and margin */
 select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
+/* Style the button with a background color, padding, and rounded corners. The button has a specific font size and margin */
 button {
     background: #c89fa3;
     color: #fff;
@@ -75,15 +86,18 @@ button {
     transition: background 0.3s ease;
 }
 
+/* Change the button background color on hover for a more interactive feel. The button background color changes to a darker shade when hovered over */
 button:hover {
     background: #9f5f80;
 }
 
+/* Style the output section with a centered alignment and a specific margin below it. The output section has a title and a margin below it */
 #output-section {
     text-align: center;
     margin-bottom: 48px;
 }
 
+/* Style the output section title with a serif font and a specific color. The title is centered and has a margin below it */
 #output-section h3 {
     font-size: 24px;
     font-family: 'Playfair Display', serif;
@@ -91,6 +105,7 @@ button:hover {
     color: #444;
 }
 
+/* Style the poetry container with a white background, padding, and rounded corners. The poetry container has a shadow effect for depth and is centered on the page */
 .poetry-container {
     background: #fff;
     padding: 48px;
@@ -101,6 +116,7 @@ button:hover {
     max-width: 700px;
 }
 
+/* Style the poetry container title with a serif font and a specific color. The title is centered and has a margin below it */
 .poetry-container h1 {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
@@ -108,13 +124,15 @@ button:hover {
     color: #2f2f2f;
 }
 
+/* Style the poem text with a specific font and color. The poem text has a specific font size and line height */
 .poem-author {
     font-style: italic;
     font-size: 14px;
     color: #777;
     margin-bottom: 32px;
-}
+}  
 
+/* Style the poem text with a specific font and color. The poem text has a specific font size and line height */
 .poem p {
     font-size: 19px;
     margin: 19px 0;
@@ -122,10 +140,12 @@ button:hover {
     transition: color 0.3s ease;
 }
 
+/* Change the poem text color on hover for a more interactive feel. The poem text color changes to a darker shade when hovered over */
 .poem p:hover {
     color: #9f5f80;
 }
 
+/* Style the footer with a centered alignment and a specific font size. The footer has a margin above it and a specific color */
 footer {
     text-align: center;
     font-size: 14px;
@@ -133,6 +153,7 @@ footer {
     color: #777;
 }
 
+/* Style the footer links with a specific color and text decoration. The footer links have a specific font style and weight */
 footer a {
     color: #9f5f80;
     text-decoration: none;
@@ -140,6 +161,7 @@ footer a {
     font-weight: bold;
 }
 
+/* Change the footer link color on hover for a more interactive feel. The footer link color changes to a darker shade when hovered over */
 footer a:hover {
     text-decoration: underline;
 }
