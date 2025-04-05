@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Poem Generator</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="src/script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <h1>Poem Generator</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <label for="theme">Choose a theme:</label>
+            <select id="theme" name="theme">
+                <option value="love">Love</option>
+                <option value="nature">Nature</option>
+                <option value="friendship">Friendship</option>
+                <option value="life">Life</option>
+            </select>
+            <button id="generate-button">Generate Poem</button>
+        </section>
+        <section id="output-section">
+            <h2>Your Poem:</h2>
+            <p id="poem-output"></p>
+        </section>
+    </main>
+    <footer>
+        <p>This project was developed by <a href="https://github.com/Lebo100" target="_blank">Lebo Tyilekile</a>.Available on <a href="https://github.com/Lebo100/AI-Poem-Generator" target="_blank">GitHub</a> and hosted
+            on <a href="https://app.netlify.com/sites/lebo-weatherapp/overview" target="_blank">Netlify</a>.</p>
+        <p>&copy; 2025 Poem Generator. All rights reserved.</p>
+    </footer>
+
+</html>
