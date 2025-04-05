@@ -6,6 +6,7 @@
     <title>AI Poem Generator</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
 </head>
 <body>
     <header>
@@ -14,17 +15,12 @@
     <main>
         <!-- Main content of the page -->
         <section id="input-section">
-            <!-- Input section for the user to enter a theme -->
-            <label for="theme">Choose a theme:</label>
-            <!-- Dropdown menu for selecting a theme -->	
-            <select id="theme" name="theme">
-                <option value="love">Love</option>
-                <option value="nature">Nature</option>
-                <option value="friendship">Friendship</option>
-                <option value="life">Life</option>
-            </select>
+            <!-- Input section for the user to enter a keyword -->
+            <label for="keyword">Enter a keyword or theme for the poem:</label>
+            <!-- Input field where users can type their keyword -->
+            <input type="text" id="keyword" name="keyword" placeholder="e.g., love, nature, friendship, etc." required>
             <!-- Button to generate the poem -->
-        <button id="generate-button">Generate Poem</button>
+        <button id="generate-button" onclick="generatePoem(event)">Generate Poem</button>
         </section>
         <!-- Output section to display the generated poem -->
         <section id="output-section">
