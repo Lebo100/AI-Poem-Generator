@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Raleway:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fdfaf6;
+    color: #3a3a3a;
+    line-height: 1.6;
+    padding: 32px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #c89fa3;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#input-section {
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+label,
+select,
+button {
+    font-size: 16px;
+    margin: 8px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background: #c89fa3;
+    color: #fff;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #9f5f80;
+}
+
+#output-section {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+#output-section h3 {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.poetry-container {
+    background: #fff;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 64px auto;
+    max-width: 700px;
+}
+
+.poetry-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 8px;
+    color: #2f2f2f;
+}
+
+.poem-author {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 32px;
+}
+
+.poem p {
+    font-size: 19px;
+    margin: 19px 0;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+.poem p:hover {
+    color: #9f5f80;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 64px;
+    color: #777;
+}
+
+footer a {
+    color: #9f5f80;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
