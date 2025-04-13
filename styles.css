@@ -12,7 +12,7 @@
 body {
     /* Add a slight overlay for text readability */
     background-color: #fdfaf6;
-    background-image: linear-gradient(rgba(253, 250, 246, 0.8), rgba(253, 250, 246, 0.8)), url('images/pen&paper.jpeg');
+    background-image: linear-gradient(rgba(253, 250, 246, 0.75), rgba(253, 250, 246, 0.75)), url('images/pen&paper.jpeg');
     background-position: center;
     background-size: 80%;
 }
@@ -38,7 +38,7 @@ header h1::after {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #c89fa3;
+    background-color: #b4787e;
     margin: 8px auto 0;
     border-radius: 2px;
 }
@@ -96,7 +96,7 @@ select {
 
 /* Style the button with a background color, padding, and rounded corners. The button has a specific font size and margin */
 button {
-    background: #c89fa3;
+    background: #b4787e;
     color: #fff;
     border: none;
     padding: 11px 20px;
@@ -108,7 +108,7 @@ button {
 
 /* Change the button background color on hover for a more interactive feel. The button background color changes to a darker shade when hovered over */
 button:hover {
-    background: #9f5f80;
+    background: #7e3f5f;
 }
 
 #output-section {
@@ -175,7 +175,7 @@ button:hover {
 
 /* Change the poem text color on hover for a more interactive feel. The poem text color changes to a darker shade when hovered over */
 .poem p:hover {
-    color: #9f5f80;
+    color: #b4787e;
 }
 
 /* Style the footer with a centered alignment and a specific font size. The footer has a margin above it and a specific color */
@@ -188,7 +188,7 @@ footer {
 
 /* Style the footer links with a specific color and text decoration. The footer links have a specific font style and weight */
 footer a {
-    color: #7e4c66;
+    color: #7e3f5f;
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
