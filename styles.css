@@ -8,13 +8,13 @@
     padding: 0;
 }
 
-/* Set a default font and background color for the body */
+/* Set a default font and background color and image for the body */
 body {
-    font-family: 'Raleway', sans-serif;
-    background: #fdfaf6;
-    color: #3a3a3a;
-    line-height: 1.6;
-    padding: 32px;
+    /* Add a slight overlay for text readability */
+    background-color: #fdfaf6;
+    background-image: linear-gradient(rgba(253, 250, 246, 0.8), rgba(253, 250, 246, 0.8)), url('images/pen&paper.jpeg');
+    background-position: center;
+    background-size: 80%;
 }
 
 /* Style the header with a centered title and a decorative line below it */
@@ -52,14 +52,14 @@ main {
 /* Style the input section with a white background, padding, and rounded corners. The input section is centered and has a shadow effect for depth */
 /* Input section styling */
 #input-section {
-    margin-bottom: 2rem;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 #input-section label {
     display: block;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     color: #555;
 }
 
@@ -70,7 +70,7 @@ main {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
     outline: none;
     transition: border 0.3s ease;
 }
@@ -113,7 +113,7 @@ button:hover {
 
 #output-section {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 8px;
 }
 
 #output-section h3 {
@@ -130,7 +130,7 @@ button:hover {
     border-radius: 16px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 64px auto;
+    margin: 20px auto;
     max-width: 700px;
 }
 
@@ -155,7 +155,7 @@ button:hover {
     font-family: 'Georgia', serif;
     font-style: italic;
     line-height: 1.6;
-    padding: 16px 0;
+    padding: 8px 0;
 }
 /* Style the keyword input with padding, border, and rounded corners. The keyword input has a specific font size and margin */
 #keyword {
@@ -182,13 +182,13 @@ button:hover {
 footer {
     text-align: center;
     font-size: 14px;
-    margin-top: 64px;
-    color: #777;
+    margin-top: 8px;
+    color: #454444;
 }
 
 /* Style the footer links with a specific color and text decoration. The footer links have a specific font style and weight */
 footer a {
-    color: #9f5f80;
+    color: #7e4c66;
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
