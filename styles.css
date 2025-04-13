@@ -111,6 +111,18 @@ button:hover {
     background: #9f5f80;
 }
 
+#output-section {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+#output-section h3 {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+    color: #444;
+}
+
 /* Style the poetry container with a white background, padding, and rounded corners. The poetry container has a shadow effect for depth and is centered on the page */
 .poetry-container {
     background: #fff;

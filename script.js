@@ -6,7 +6,9 @@ function generatePoem(event) {
     let theme = document.getElementById("keyword").value;
 
     // Show loading alert
-    alert("Generating your poem...");
+    let loadingMessage = document.querySelector("#loading-message");
+    loadingMessage.style.display = "block"; // Show loading message
+    document.getElementById("generate-button").disabled = true; // Disable the button
 
     // Get the poem display area
     let poemOutput = document.querySelector(".poem");
@@ -54,6 +56,9 @@ function generatePoem(event) {
                 if (cursor) {
                     cursor.style.display = 'none';
                 }
+                // Hide loading state and re-enable the button
+                loadingMessage.style.display = "none";
+                document.getElementById("generate-button").disabled = false; // Re-enable button
             })
             .start();
     });
