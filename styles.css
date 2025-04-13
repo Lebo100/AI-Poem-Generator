@@ -111,20 +111,6 @@ button:hover {
     background: #9f5f80;
 }
 
-/* Style the output section with a centered alignment and a specific margin below it. The output section has a title and a margin below it */
-#output-section {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-/* Style the output section title with a serif font and a specific color. The title is centered and has a margin below it */
-#output-section h3 {
-    font-size: 24px;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 8px;
-    color: #444;
-}
-
 /* Style the poetry container with a white background, padding, and rounded corners. The poetry container has a shadow effect for depth and is centered on the page */
 .poetry-container {
     background: #fff;
@@ -146,11 +132,26 @@ button:hover {
 
 /* Style the poem text with a specific font and color. The poem text has a specific font size and line height */
 .poem-author {
+    font-weight: bold;
+    font-size: 20px;
     font-style: italic;
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 32px;
+    margin-top: 8px;
+    color: #333;
 }  
+/* Style the poem text with a specific font and color. The poem text has a specific font size and line height */
+.poem {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.6;
+    padding: 16px 0;
+}
+/* Style the keyword input with padding, border, and rounded corners. The keyword input has a specific font size and margin */
+#keyword {
+    margin-top: 16px;
+    padding: 8px;
+    width: 60%;
+    font-size: 16px;
+}
 
 /* Style the poem text with a specific font and color. The poem text has a specific font size and line height */
 .poem p {
