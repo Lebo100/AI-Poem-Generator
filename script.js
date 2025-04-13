@@ -1,42 +1,70 @@
+// Function to generate a poem based on user input
 function generatePoem(event) {
-  event.preventDefault();
+    event.preventDefault(); // Prevent form from refreshing the page
 
-  // Get the theme input
-  let theme = document.getElementById("keyword").value;
+    // Get user input from the input field
+    let theme = document.getElementById("keyword").value;
 
-  // Elements to update
-  let poemOutput = document.getElementById("poem-output");
-  let poetryTitle = document.querySelector(".poetry-container h1");
-  let poemAuthor = document.querySelector(".poem-author");
-  let staticPoem = document.querySelector(".poetry-container .poem");
+    // Show loading alert
+    alert("Generating your poem...");
 
-  // Clear previous output
-  poemOutput.innerHTML = "";
-  staticPoem.style.display = "none"; // Hide default poem once generation starts
+    // Get the poem display area
+    let poemOutput = document.querySelector(".poem");
 
-  // Update title and author
-  poetryTitle.textContent = `Poem for "${theme}"`;
-  poemAuthor.textContent = "by SheCodes AI ✨";
+    // Get the poem title and author elements
+    let poetryTitle = document.querySelector(".poetry-container h1");
+    let poemAuthor = document.querySelector(".poetry-container .poem-author");
 
-  // Alert user
-  alert("Generating your poem...");
+    // Set the author name
+    poemAuthor.textContent = "by SheCodes AI ✨";
 
-  // API setup
-  let apiKey = "58eo1d6cf9fa20590375b3ta54da169f";
-  let context = "Become a poet like shakesphere and write a five line poem, about the following theme: ";
-  let prompt = `Write a poem about ${theme}`;
-  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+    // Update the poem title based on the theme
+    poetryTitle.textContent = `Poem for "${theme}"`;
 
-  // Fetch poem
-  axios.get(apiUrl).then(function (response) {
-    let poem = response.data.answer;
+    // Clear previous poem content
+    poemOutput.innerHTML = "";
 
-    // Typewriter effect
-    let typewriter = new Typewriter(poemOutput, {
-      loop: false,
-      delay: 50,
+    // Set up API details
+    let apiKey = "58eo1d6cf9fa20590375b3ta54da169f";
+    let prompt = `Write a five-line poem about ${theme}`;
+    let context = "Become a poet inspire by Shakespear. Only write five lines. Each line should be poetic and relevant to the theme.";
+    let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+    // Fetch the poem from the AI API
+    axios.get(apiUrl).then(function (response) {
+
+        // Get the AI-generated poem
+        let poem = response.data.answer;
+
+        // Update the poem title based on the theme
+        poetryTitle.textContent = `Poem for "${theme}"`;
+
+         // Use Typewriter effect to display the poem line by line
+        let typewriter = new Typewriter(poemOutput, {
+            loop: false,
+            delay: 40, // typing speed
+        });
+
+        // Start typing the poem
+        typewriter
+            .typeString(formatPoem(poem))
+            .callFunction(() => {
+                // Remove the typewriter cursor after typing
+                let cursor = document.querySelector('.Typewriter__cursor');
+                if (cursor) {
+                    cursor.style.display = 'none';
+                }
+            })
+            .start();
     });
-
-    typewriter.typeString(poem).start();
-  });
 }
+
+// Helper function to convert plain text poem into HTML with <p> tags
+function formatPoem(poemText) {
+    let lines = poemText.split("\n");
+    lines = lines.slice(0, 5); // Ensure we are limiting to 5 lines
+    return lines.map(line => `<p>${line}</p>`).join("");
+}
+
+// Attach event listener to the generate button
+document.getElementById("generate-button").addEventListener("click", generatePoem);
