@@ -20,8 +20,8 @@ function generatePoem(event) {
     // Set the author name
     poemAuthor.textContent = "by SheCodes AI ✨";
 
-    // Update the poem title based on the theme
-    poetryTitle.textContent = `Poem for "${theme}"`;
+    // Update the poem title based on the theme, converting the theme to uppercase
+    poetryTitle.textContent = `"${theme.toUpperCase()}"`;
 
     // Clear previous poem content
     poemOutput.innerHTML = "";
@@ -37,9 +37,6 @@ function generatePoem(event) {
 
         // Get the AI-generated poem
         let poem = response.data.answer;
-
-        // Update the poem title based on the theme
-        poetryTitle.textContent = `Poem for "${theme}"`;
 
          // Use Typewriter effect to display the poem line by line
         let typewriter = new Typewriter(poemOutput, {
