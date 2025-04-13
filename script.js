@@ -1,29 +1,42 @@
 function generatePoem(event) {
-    event.preventDefault(); // Prevent form submission
+  event.preventDefault();
 
-    // Show loading message
-    alert("Generating your poem...");
+  // Get the theme input
+  let theme = document.getElementById("keyword").value;
 
-    // Get the input keyword from the user
-    let theme = document.getElementById('theme').value;
+  // Elements to update
+  let poemOutput = document.getElementById("poem-output");
+  let poetryTitle = document.querySelector(".poetry-container h1");
+  let poemAuthor = document.querySelector(".poem-author");
+  let staticPoem = document.querySelector(".poetry-container .poem");
 
-    // Replace the existing poem with a new one using the Typewriter effect
-    let poemOutput = document.getElementById('poem-output');
-    
-    // Clear the existing poem content
-    poemOutput.innerHTML = '';
+  // Clear previous output
+  poemOutput.innerHTML = "";
+  staticPoem.style.display = "none"; // Hide default poem once generation starts
 
-    // Initialize the Typewriter effect
+  // Update title and author
+  poetryTitle.textContent = `Poem for "${theme}"`;
+  poemAuthor.textContent = "by AI Muse ✨";
+
+  // Alert user
+  alert("Generating your poem...");
+
+  // API setup
+  let apiKey = "58eo1d6cf9fa20590375b3ta54da169f";
+  let context = "Become a poet like shakesphere and write a five line poem about the following theme: ";
+  let prompt = `Write a poem about ${theme}`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  // Fetch poem
+  axios.get(apiUrl).then(function (response) {
+    let poem = response.data.answer;
+
+    // Typewriter effect
     let typewriter = new Typewriter(poemOutput, {
-        loop: false,
-        delay: 75
+      loop: false,
+      delay: 50,
     });
 
-    // Start typing the generated fake poem
-    typewriter.typeString(theme)
-        .start();
-
-    // Replace the 'Whispers on Paper' with the generated poem title
-    let poetryTitle = document.querySelector('.poetry-container h1');
-    poetryTitle.textContent = `Poem for "${theme}"`;  // You can customize the title based on the theme
+    typewriter.typeString(poem).start();
+  });
 }
