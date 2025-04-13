@@ -16,14 +16,14 @@ function generatePoem(event) {
 
   // Update title and author
   poetryTitle.textContent = `Poem for "${theme}"`;
-  poemAuthor.textContent = "by AI Muse ✨";
+  poemAuthor.textContent = "by SheCodes AI ✨";
 
   // Alert user
   alert("Generating your poem...");
 
   // API setup
   let apiKey = "58eo1d6cf9fa20590375b3ta54da169f";
-  let context = "Become a poet like shakesphere and write a five line poem about the following theme: ";
+  let context = "Become a poet like shakesphere and write a five line poem, about the following theme: ";
   let prompt = `Write a poem about ${theme}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
