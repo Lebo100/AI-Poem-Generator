@@ -21,23 +21,18 @@
             <!-- Input field where users can type their keyword -->
             <input type="text" id="keyword" name="keyword" placeholder="e.g., love, nature, friendship, etc." required>
             <!-- Button to generate the poem -->
-        <button id="generate-button" onclick="generatePoem(event)">Generate Poem</button>
-        </section>
-        <!-- Output section to display the generated poem -->
-        <section id="output-section">
-            <h3>Generated Poem</h3>
-            <div id="poem-output" class="poem-output"></div>
+        <button id="generate-button">Generate Poem</button>
         </section>
         <!-- Poem container to display the generated poem -->
         <div class="poetry-container">
-            <h1>Whispers on Paper</h1>
-            <p class="poem-author">by ____</p>
-            <div class="poem">
+            <h1 id="poem-title">Whispers on Paper</h1>
+            <div class="poem" id="poem-display">
                 <p>The stars leaned in and kissed the sea,</p>
                 <p>As night unveiled her mystery.</p>
                 <p>Soft winds carried dreams on wings,</p>
                 <p>And silence hummed forgotten things.</p>
             </div>
+            <p class="poem-author" id="poem-author">by ____</p>
         </div>
     </main>
     <br>
